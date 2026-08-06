@@ -46,8 +46,8 @@ jobs:
 
       - name: update the tags in helm chart
         run: |
-          sed -i "s|image: ${{ secrets.DOCKERHUB_USERNAME }}/devops-diaries-backend:latest|image: ${{ secrets.DOCKERHUB_USERNAME }}/devops-diaries-backend:${{github.run_id}}|g" ./helm/devops_diaries/values.yaml
-          sed -i "s|image: ${{ secrets.DOCKERHUB_USERNAME }}/devops-diaries-frontend:latest|image: ${{ secrets.DOCKERHUB_USERNAME }}/devops-diaries-frontend:${{github.run_id}}|g" ./helm/devops_diaries/values.yaml
+          sed -i "s|image: ${{ secrets.DOCKERHUB_USERNAME }}/devops-diaries-backend:latest|image: ${{ secrets.DOCKERHUB_USERNAME }}/devops-diaries-backend:${{github.run_id}}|g" ./devops_diaries/values.yaml
+          sed -i "s|image: ${{ secrets.DOCKERHUB_USERNAME }}/devops-diaries-frontend:latest|image: ${{ secrets.DOCKERHUB_USERNAME }}/devops-diaries-frontend:${{github.run_id}}|g" ./devops_diaries/values.yaml
 
       - name: commit and push changes to helm chart
         run: |
