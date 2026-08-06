@@ -53,6 +53,6 @@ jobs:
         run: |
           git config --global user.name "Vinay29k"
           git config --global user.email "kumarvinay23.aug@gmail.com"
-          git add ./helm/devops_diaries/values.yaml
+          git add ./devops_diaries/values.yaml
           git commit -m "Update image tags in Helm chart"
           git push origin main
