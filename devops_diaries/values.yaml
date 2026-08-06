@@ -21,7 +21,7 @@ db:
       targetPort: 5432
 backend:
   name: devops-diaries-backend
-  image: vinay526/devops-diaries-backend:latest
+  image: vinay526/devops-diaries-backend:31106661422
   replicacount: 1
   services:
       name: devops-diaries-backend
@@ -29,7 +29,7 @@ backend:
       targetPort: 5000
 frontend:
   name: devops-diaries-frontend
-  image: vinay526/devops-diaries-frontend:latest
+  image: vinay526/devops-diaries-frontend:31106661422
   replicacount: 1
   services:
       name: devops-diaries-frontend
