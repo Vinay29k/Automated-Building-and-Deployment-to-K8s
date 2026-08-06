@@ -1,0 +1,37 @@
+replicacount: 1
+namespace:
+  name: devops-diaries
+
+secret:
+  name: devops-diaries-db-secret
+
+persistentvolume:
+  name: devops-diaries-pv
+  storageClassname: standard
+  capacity: 10Gi
+
+
+db:
+  name: devops-diaries-db
+  image: postgres:16-alpine
+  replicacount: 1
+  services:
+      name: devops-diaries-db
+      port: 5432
+      targetPort: 5432
+backend:
+  name: devops-diaries-backend
+  image: vinay526/devops-diaries-backend:latest
+  replicacount: 1
+  services:
+      name: devops-diaries-backend
+      port: 5000
+      targetPort: 5000
+frontend:
+  name: devops-diaries-frontend
+  image: vinay526/devops-diaries-frontend:latest
+  replicacount: 1
+  services:
+      name: devops-diaries-frontend
+      port: 80
+      targetPort: 8080
