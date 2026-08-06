@@ -55,4 +55,4 @@ jobs:
           git config --global user.email "kumarvinay23.aug@gmail.com"
           git add ./devops_diaries/values.yaml
           git commit -m "Update image tags in Helm chart"
-          git push origin main
+          git push https://Vinay29k:${{ secrets.GT_TOKEN }}@github.com/Vinay29k/Automated-Building-and-Deployment-to-K8s.git HEAD:main
